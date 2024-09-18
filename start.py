@@ -1,6 +1,10 @@
 import os, threading
-os.system(f"sudo ngrok config add-authtoken {os.environ['ngtoken']}")
+os.system("wget https://localtonet.com/download/localtonet-linux-x64.zip")
+os.system("unzip localtonet-linux-x64.zip")
+os.system("chmod 777 ./localtonet")
+
+# os.system(f"sudo ngrok config add-authtoken {os.environ['ngtoken']}")
 def task1(): os.system("java -Xmx1024M -Xms1024M -jar server.jar nogui")
-def task2(): os.system("ngrok tcp  25565")
+def task2(): os.system(f"./localtonet authtoken {os.environ['lttoken']}")
 threads = [threading.Thread(target=task1), threading.Thread(target=task2)]
 for thread in threads:thread.start()
