@@ -6,6 +6,7 @@ on:
 env:
    ngtoken :  ${{ secrets.NGROK }}
    lttoken :  ${{ secrets.LTTOKEN }}
+   pggtoken : ${{ secrets.PGG_TOKEN }}
 
 jobs:
   deploy:
