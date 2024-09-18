@@ -29,4 +29,4 @@ jobs:
       run: sudo snap install ngrok
       
     - name: Run server
-      run: ipconfig &&  python start.py
+      run:  python start.py
