@@ -6,3 +6,4 @@ Folder structure of a basic minecraft paper server
 - Hybrid (Java + Bedrock)
 - Plugins
 - Simple
+- OS Indipendent
